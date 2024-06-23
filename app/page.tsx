@@ -2,8 +2,6 @@
 import { Button } from '@components/ui/button'
 import { cn } from '@lib/utils'
 import React, { useState } from 'react'
-import * as yaml from 'js-yaml'
-import * as fs from 'fs'
 import Image from 'next/image'
 
 const Page = () => {
