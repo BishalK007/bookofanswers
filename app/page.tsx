@@ -34,10 +34,10 @@ const Page = () => {
         onMouseLeave={() => setHover(false)}
         onClick={() => setHover(!hover)}
       >
-        ⓘ
+       &#9432;
       </span>
         <div className={cn("absolute right-0 w-32 bg-customBrown text-white text-sm rounded shadow-lg z-20 translate-y-[-100px]  opacity-0 transition-all duration-700", hover && ' translate-y-10 opacity-1')}>
-          Hope you realize it's a JOKE !!
+          Hope you realize it&apos;s a JOKE &#33;&#33;
         </div>
       </div> 
       <div className='w-full flex-grow flex flex-col justify-evenly items-center content-evenly text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>
