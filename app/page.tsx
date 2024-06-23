@@ -8,9 +8,11 @@ import Image from 'next/image'
 
 const Page = () => {
   const [isDrawing, setIsDrawing] = useState<Boolean>(false)
-  const [responsequote, setResponsequote] = useState("Your Answer Will be visible here");
+  const [responsequote, setResponsequote] = useState<String>("Your Answer Will be visible here");
+  const [isFirst, setIsFirst] = useState<Boolean>(true);
 
   const onButtonClick = async () => {
+    setIsFirst(false);
     if (!isDrawing) {
       setIsDrawing(true);
     }
@@ -38,7 +40,7 @@ const Page = () => {
 
         <div className="relative w-full">
           <div className={cn('transition-opacity duration-500 absolute w-full', isDrawing ? 'opacity-0' : 'opacity-1')}>
-            <div>{responsequote}</div>
+            <div>{<div className={cn('text-2xl transition-opacity delay-500', isFirst ? 'opacity-0' : 'opacity-1')}>Previous Answer -</div>}<br/>{responsequote}</div>
           </div>
           <div className={cn('transition-opacity duration-500 absolute  flex flex-row justify-center items-center w-full', isDrawing ? 'opacity-1' : 'opacity-0')}>
             <div className="animate-bounce w-fit">
