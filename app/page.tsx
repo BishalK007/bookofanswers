@@ -23,11 +23,23 @@ const Page = () => {
       setIsDrawing(false);
     }
   }
-
+  const [hover, setHover] = useState(false);
 
   return (
     <div className='gradient-background w-screen h-[100dvh] font-medival flex flex-col px-10 text-center content-center'>
-      <div className='flex flex-row justify-center text-5xl font-bold text-customBrown pt-10'>Book To Answers</div>
+      <div className='flex flex-row justify-center text-5xl font-bold text-customBrown pt-10'>Book To Answers 
+      <span
+        className="text-xl cursor-pointer"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onClick={() => setHover(!hover)}
+      >
+        ⓘ
+      </span>
+        <div className={cn("absolute right-0 w-32 bg-customBrown text-white text-sm rounded shadow-lg z-20 translate-y-[-100px]  opacity-0 transition-all duration-700", hover && ' translate-y-10 opacity-1')}>
+          Hope you realize it's a JOKE !!
+        </div>
+      </div> 
       <div className='w-full flex-grow flex flex-col justify-evenly items-center content-evenly text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>
         <div className="relative w-full">
           <div className={cn('transition-opacity duration-500 absolute w-full', isDrawing ? 'opacity-0' : 'opacity-1')}>
