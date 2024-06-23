@@ -31,10 +31,10 @@ const Page = () => {
       <div className='w-full flex-grow flex flex-col justify-evenly items-center content-evenly text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>
         <div className="relative w-full">
           <div className={cn('transition-opacity duration-500 absolute w-full', isDrawing ? 'opacity-0' : 'opacity-1')}>
-            'Think of the question you want answers to, tap start and concentrate.'
+            &apos;Think of the question you want answers to, tap start and concentrate.&apos;
           </div>
           <div className={cn('transition-opacity duration-500 absolute w-full', isDrawing ? 'opacity-1' : 'opacity-0')}>
-            'When You want your answer tap stop'
+            &apos;When You want your answer tap stop&apos;
           </div>
         </div>
 
