@@ -11,6 +11,9 @@ const config = {
   prefix: "",
   theme: {
     extend: {
+      height: {
+        'screen-vh': 'calc(var(--vh) * 100)', // Custom height using the CSS variable
+      },
       clipPath: {
         'diamond': 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
       },
