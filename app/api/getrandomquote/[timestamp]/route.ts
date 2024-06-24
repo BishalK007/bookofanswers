@@ -1,8 +1,9 @@
 import * as fs from 'fs';
 import jsYaml from 'js-yaml';
 
-export const GET = async (request: Request): Promise<Response> => {
+export const GET = async (request: Request, { params }: { params: { timestamp: string } }): Promise<Response> => {
     try {
+        console.log(params.timestamp);
         const fileContents = fs.readFileSync('public/data.yaml', 'utf8');
         const data = jsYaml.load(fileContents) as { quotes: string[] };
 

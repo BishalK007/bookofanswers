@@ -3,6 +3,7 @@ import jsYaml from 'js-yaml';
 
 export const GET = async (request: Request): Promise<Response> => {
     try {
+
         const fileContents = fs.readFileSync('public/data.yaml', 'utf8');
         const data = jsYaml.load(fileContents) as { quotes: string[] };
 
