@@ -16,8 +16,9 @@ export const GET = async (request: Request): Promise<Response> => {
             {
                 status: 200,
                 headers: {
-                    'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
-                    'Content-Type': 'application/json'
+                    'Cache-Control': 'public, s-maxage=1',
+                    'CDN-Cache-Control': 'public, s-maxage=1',
+                    'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
                 }
             }
         );
@@ -29,8 +30,9 @@ export const GET = async (request: Request): Promise<Response> => {
             {
                 status: 500,
                 headers: {
-                    'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
-                    'Content-Type': 'application/json'
+                    'Cache-Control': 'public, s-maxage=1',
+                    'CDN-Cache-Control': 'public, s-maxage=1',
+                    'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
                 }
             }
         );
