@@ -15,7 +15,7 @@ const Page = () => {
       setIsDrawing(true);
     }
     else {
-      const response = await fetch('/api/getrandomquote');
+      const response = await fetch('/api/getrandomquote', {cache: 'no-store'});
       const data = await response.json();
       setResponsequote(data.quote);
       setIsDrawing(false);
