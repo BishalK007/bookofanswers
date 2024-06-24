@@ -16,7 +16,8 @@ const Page = () => {
       setIsDrawing(true);
     }
     else {
-      const response = await fetch('/api/getrandomquote', {cache: 'no-store'});
+      const timestamp = Date.parse(new Date().toString())
+      const response = await fetch(`/api/getrandomquote/${timestamp}`, { next: { revalidate: 0 } });
       const data = await response.json();
 
       setResponsequote(data.quote);
