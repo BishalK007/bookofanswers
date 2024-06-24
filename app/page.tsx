@@ -3,6 +3,7 @@ import { Button } from '@components/ui/button'
 import { cn } from '@lib/utils'
 import React, { useState } from 'react'
 import Image from 'next/image'
+export const dynamic = 'force-dynamic';
 
 const Page = () => {
   const [isDrawing, setIsDrawing] = useState<Boolean>(false)
