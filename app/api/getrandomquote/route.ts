@@ -25,7 +25,7 @@ export const GET = async (request: Request): Promise<Response> => {
     } catch (error) {
         return new Response(
             JSON.stringify({
-                quote: "Server Error"
+                quote: `SERVER ERROR:: ${error}`
             }),
             {
                 status: 500,
