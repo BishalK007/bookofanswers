@@ -16,11 +16,72 @@ const Page = () => {
       setIsDrawing(true);
     }
     else {
-      const timestamp = Date.parse(new Date().toString())
-      const response = await fetch(`/api/getrandomquote/${timestamp}`, { next: { revalidate: 0 } });
-      const data = await response.json();
+      const data = [
+        "LISTEN MORE CAREFULLY; THEN YOU WILL KNOW",
+        "COUNT TO 10; ASK AGAIN",
+        "YOU'LL NEED MORE INFORMATION",
+        "DO IT EARLY",
+        "IT'S A GOOD TIME TO MAKE PLANS",
+        "DON'T BET ON IT",
+        "YOU WILL NOT BE DISAPPOINTED",
+        "PROCEED AT A MORE RELAXED PACE",
+        "DEFINITELY",
+        "YOU ARE SURE TO HAVE SUPPORT",
+        "ADOPT AN ADVENTUROUS ATTITUDE",
+        "IT WOULD BE INADVISABLE",
+        "SPEAK UP ABOUT IT",
+        "IT WILL REMAIN UNPREDICTABLE",
+        "DON'T FORGET TO HAVE FUN",
+        "BE DELIGHTFULLY SURE OF IT",
+        "REPRIORITIZE WHAT IS IMPORTANT",
+        "APPROACH CAUTIOUSLY",
+        "DON'T HESITATE",
+        "ACT AS THOUGH IT IS ALREADY REAL",
+        "FOLLOW THE ADVICE OF EXPERTS",
+        "OF COURSE",
+        "PAY ATTENTION TO THE DETAILS",
+        "REMAIN FLEXIBLE",
+        "IT WILL BE A PLEASURE",
+        "BETTER TO WAIT",
+        "ABSOLUTELY NOT",
+        "IT WILL AFFECT HOW OTHERS SEE YOU",
+        "DON’T GET CAUGHT UP IN YOUR EMOTIONS",
+        "TRY A MORE UNLIKELY SOLUTION",
+        "YOU MUST ACT NOW",
+        "IT WILL BRING GOOD LUCK",
+        "IT CANNOT FAIL",
+        "TELL SOMEONE WHAT IT MEANS TO YOU",
+        "NOW YOU CAN",
+        "GIVE IT ALL YOU'VE GOT",
+        "DON'T GET CAUGHT UP IN YOUR EMOTIONS",
+        "SETTING PRIORITIES WILL BE A NECESSARY PART OF THE PROCESS",
+        "LET IT GO",
+        "TAKE A CHANCE",
+        "INVESTIGATE AND THEN ENJOY IT",
+        "WATCH AND SEE WHAT HAPPENS",
+        "REPRIORITIZE WHAT IS IMPORTANT",
+        "THIS IS A GOOD TIME TO MAKE A NEW PLAN",
+        "ONLY DO IT ONCE",
+        "UNFAVOURABLE AT THIS TIME",
+        "ACCEPT A CHANGE TO YOUR ROUTINE",
+        "KEEP IT TO YOURSELF",
+        "IT'S TIME FOR YOU TO GO",
+        "YOU ARE SURE TO HAVE SUPPORT!",
+        "IT WILL CREATE A STIR",
+        "IT’LL COST YOU",
+        "A YEAR FROM NOW IT WON'T MATTER",
+        "IT’S TIME FOR YOU TO GO",
+        "PROVIDED YOU SAY 'THANK YOU'",
+        "YOU WILL NOT BE DISAPPOINTED",
+        "DOUBT IT",
+        "DON'T OVERDO IT",
+        "IT’S A GOOD TIME TO MAKE PLANS",
+        "KEEP IT TO YOURSELF"
+      ];      
+      const randomIndex = Math.floor(Math.random() * data.length);
+      const randomString = data[randomIndex];
 
-      setResponsequote(data.quote);
+      setResponsequote(randomString);
       setIsDrawing(false);
     }
   }
